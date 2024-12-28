@@ -1,2 +1,47 @@
 # Top_SQL_Queries
 Top more than 30 queries of SQL
+
+1. SELECT * FROM salesman
+2. SELECT 'This is SQL Exercise, Practice and Solution'
+3. SELECT 5,10,15
+4. SELECT 10+15
+5. SELECT 10+15-5*2
+6. SELECT name, commission FROM salesman
+7. SELECT ord_date, salesman_id, ord_no, purch_amt FROM orders
+8. SELECT DISTINCT salesman_id FROM orders
+9. SELECT name, city FROM salesman WHERE city='Paris'
+10. SELECT * FROM customer WHERE grade=200
+11. SELECT ord_no, ord_date FROM orders WHERE salesman_id=5001
+12. SELECT YEAR, SUBJECT, WINNER FROM nobel_win WHERE YEAR=1970
+13. SELECT WINNER FROM nobel_win WHERE SUBJECT='Literature' AND YEAR=1971
+14. SELECT YEAR,SUBJECT FROM nobel_win WHERE WINNER='Dennis Gabor'
+15. SELECT WINNER FROM nobel_win WHERE SUBJECT='Physics' and YEAR>1950
+16. SELECT YEAR, SUBJECT, WINNER, COUNTRY FROM nobel_win WHERE SUBJECT="Chemistry" AND YEAR BETWEEN 1965 and 1975
+17. SELECT * FROM nobel_win WHERE YEAR>1972 AND WINNER IN ('Menachem Begin', 'Yitzhak Rabin')
+18. SELECT YEAR, SUBJECT, WINNER, COUNTRY, CATEGORY FROM nobel_win WHERE WINNER LIKE 'Louis%'
+19. SELECT * FROM nobel_win WHERE (SUBJECT='Physics' AND YEAR=1970)
+    UNION (select * FROM nobel_win WHERE (SUBJECT='Economics' AND YEAR=1971))
+20. SELECT * FROM nobel_win WHERE SUBJECT in ('Physiology', 'Economics') AND YEAR=1970
+21. SELECT * FROM nobel_win WHERE (SUBJECT='Physiology' AND YEAR<=1971)
+    UNION (SELECT * FROM nobel_win WHERE (SUBJECT='Peace' AND YEAR>=1974))
+22. SELECT * FROM nobel_win WHERE YEAR>1972 and WINNER="Johannes Georg Bednorz"
+23. SELECT * FROM nobel_win WHERE SUBJECT NOT like 'P%' ORDER BY YEAR DESC, WINNER
+24. SELECT YEAR, SUBJECT, WINNER, CATEGORY FROM nobel_win
+    WHERE YEAR=1970
+    ORDER BY
+    CASE
+    WHEN SUBJECT IN('Chemistry', 'Economics') THEN 1
+    ELSE 0
+    END, SUBJECT
+25. SELECT * FROM item_mast WHERE PROPRICE BETWEEN 200 AND 600
+26. SELECT AVG(PROPRICE) FROM item_mast WHERE PROCOM=16
+27. SELECT PRONAME AS 'ITEM NAEM', PROPRICE AS 'Price' FROM item_mast
+28. SELECT PRONAME, PROPRICE FROM item_mast WHERE PROPRICE>=250 ORDER BY PROPRICE DESC, PRONAME
+29. SELECT AVG(PROPRICE) AS AVG, PROCOM FROM item_mast GROUP BY PROCOM
+30. SELECT PRONAME, PROPRICE FROM item_mast 
+    WHERE PROPRICE=(SELECT min(PROPRICE) FROM item_mast)
+31. SELECT DISTINCT EMPLNAME FROM emp_detail
+32. SELECT * FROM emp_detail WHERE EMPLNAME="Snares"
+33. SELECT * FROM emp_detail WHERE Emp_Dept=57
+
+
